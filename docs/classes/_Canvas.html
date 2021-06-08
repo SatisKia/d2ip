@@ -1,0 +1,1653 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>D2iPドキュメント</TITLE>
+</HEAD>
+<BODY>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR height="100">
+<TD bgcolor="#cccccc">
+<P><FONT size="+2"><B>クラス _Canvas／_Canvas3D</B></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>アプリケーションの表示面を提供します。イベントはこのクラスのサブクラスのインスタンスに通知されます。</P>
+
+<P>_Canvas3D クラスでは、下記のフレームワークを追加する必要があります。</P>
+
+<P>・OpenGLES.framework<BR>
+・QuartzCore.framework</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR bgcolor="#cccccc">
+<TD><FONT size="+2"><B>インスタンスメソッド</B></FONT></TD>
+</TR>
+</TABLE>
+</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getMain</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (_Main*)<B>getMain</B></P>
+<P>アプリケーション唯一の _Main オブジェクトを取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+_Main オブジェクトを返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getWidth</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getWidth</B></P>
+<P>スクリーンの幅を取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+スクリーンの幅をピクセル単位で返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getHeight</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getHeight</B></P>
+<P>スクリーンの高さを取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+スクリーンの高さをピクセル単位で返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getGraphics</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (_Graphics*)<B>getGraphics</B></P>
+<P>キャンバスに描画するための _Graphics オブジェクトを取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+キャンバスに描画するための _Graphics オブジェクトを返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>clearTouch</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>clearTouch</B></P>
+<P>タッチ情報を削除します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+addView:: メソッドを使用してアラートビューを表示する等、キャンバスからフォーカスが奪われる場合、本メソッドを呼び出す必要があります。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getTouchNum</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getTouchNum</B></P>
+<P>タッチ数を取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+タッチ数を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getTouchX:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getTouchX:</B>(int)index</P>
+<P>タッチイベントX座標を取得します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">index</TD><TD>タッチID</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+タッチイベントX座標を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getTouchY:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getTouchY:</B>(int)index</P>
+<P>タッチイベントY座標を取得します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">index</TD><TD>タッチID</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+タッチイベントY座標を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setWindow::::::<BR>
+setWindow::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setWindow:</B>(int)left <B>:</B>(int)top <B>:</B>(int)right <B>:</B>(int)bottom <B>:</B>(int)width <B>:</B>(int)height<BR>
+- (void)<B>setWindow:</B>(int)width <B>:</B>(int)height</P>
+<P>スクリーン内の矩形領域をウィンドウ領域として設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">left</TD><TD>スクリーン内の矩形の左上X座標を指定します。</TD></TR>
+<TR><TD valign="top">top</TD><TD>スクリーン内の矩形の左上Y座標を指定します。</TD></TR>
+<TR><TD valign="top">right</TD><TD>スクリーン内の矩形の右下X座標を指定します。</TD></TR>
+<TR><TD valign="top">bottom</TD><TD>スクリーン内の矩形の右下Y座標を指定します。</TD></TR>
+<TR><TD valign="top">width</TD><TD>スクリーン内の矩形領域にマッピングするウィンドウの幅を指定します。</TD></TR>
+<TR><TD valign="top">height</TD><TD>スクリーン内の矩形領域にマッピングするウィンドウの高さを指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+パラメータが2個のタイプは、ピクセルアスペクト比1:1でスクリーン内にセンタリングされるようにマッピングされます。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getWindowLeft</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getWindowLeft</B></P>
+<P>setWindow::::::／setWindow:: メソッドにより設定されているスクリーン内の矩形の左上X座標を取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+スクリーン内の矩形の左上X座標を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getWindowTop</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getWindowTop</B></P>
+<P>setWindow::::::／setWindow:: メソッドにより設定されているスクリーン内の矩形の左上Y座標を取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+スクリーン内の矩形の左上Y座標を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getWindowRight</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getWindowRight</B></P>
+<P>setWindow::::::／setWindow:: メソッドにより設定されているスクリーン内の矩形の右下X座標を取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+スクリーン内の矩形の右下X座標を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getWindowBottom</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getWindowBottom</B></P>
+<P>setWindow::::::／setWindow:: メソッドにより設定されているスクリーン内の矩形の右下Y座標を取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+スクリーン内の矩形の右下Y座標を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>windowX:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>windowX:</B>(int)x</P>
+<P>スクリーンX座標をウィンドウX座標に変換します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">x</TD><TD>スクリーンX座標</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+ウィンドウX座標を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>windowY:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>windowY:</B>(int)y</P>
+<P>スクリーンY座標をウィンドウY座標に変換します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">y</TD><TD>スクリーンY座標</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+ウィンドウY座標を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>screenX:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>screenX:</B>(int)x</P>
+<P>ウィンドウX座標をスクリーンX座標に変換します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">x</TD><TD>ウィンドウX座標</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+スクリーンX座標を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>screenY:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>screenY:</B>(int)y</P>
+<P>ウィンドウY座標をスクリーンY座標に変換します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">y</TD><TD>ウィンドウY座標</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+スクリーンY座標を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>screenWidth:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>screenWidth:</B>(int)width</P>
+<P>ウィンドウX方向幅をスクリーンX方向幅に変換します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">width</TD><TD>ウィンドウX方向幅</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+スクリーンX方向幅を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>screenHeight:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>screenHeight:</B>(int)height</P>
+<P>ウィンドウY方向幅をスクリーンY方向幅に変換します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">height</TD><TD>ウィンドウY方向幅</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+スクリーンY方向幅を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setLayout:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setLayout:</B>(_Layout*)layout</P>
+<P>レイアウトを適用します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">layout</TD><TD>レイアウト情報を保持する _Layout オブジェクト。nil を指定すると、レイアウトを解除します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+レイアウトを適用すると、レイアウトタッチイベントを検知することができるようになります。<BR>
+また、getLayoutState メソッドでレイアウトのタッチ状態を取得できるようになります。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getLayoutState</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getLayoutState</B></P>
+<P>レイアウトのタッチ状態を取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+レイアウトのタッチ状態を返します。</P>
+<P><B>補足説明：</B><BR>
+本メソッドの戻り値の各ビットの位置がレイアウトIDに対応します。ビットとレイアウトIDの対応は、1&lt;&lt;(レイアウトID) となります。例えば、レイアウトIDが 2 のレイアウトがタッチされているかどうかの判定は、本メソッドの戻り値と (1&lt;&lt;2) とでAND（"&amp;"）をとります。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>drawLayout:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>drawLayout:</B>(_Graphics*)g</P>
+<P>レイアウトをデバッグ表示します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">g</TD><TD>描画に使用される _Graphics オブジェクト</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+描画に使用される色やフォントサイズ等は、あらかじめ設定しておく必要があります。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>addView::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>addView:</B>(UIView*)view <B>:</B>(int)tag</P>
+<P>ビューを追加します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">view</TD><TD>追加するビューを指定します。</TD></TR>
+<TR><TD valign="top">tag</TD><TD>ビューに設定するタグ値を指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>removeView:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>removeView:</B>(int)tag</P>
+<P>ビューを取り除きます。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">tag</TD><TD>取り除くビューのタグ値を指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>[_Canvas3D クラス] getViewportWidth</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getViewportWidth</B></P>
+<P>glViewport 関数の引数に有効な幅の値を取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+glViewport 関数の引数に有効な幅の値を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>[_Canvas3D クラス] getViewportHeight</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getViewportHeight</B></P>
+<P>glViewport 関数の引数に有効な高さの値を取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+glViewport 関数の引数に有効な高さの値を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>[_Canvas3D クラス] lock3D</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>lock3D</B></P>
+<P>OpenGL ES 描画の開始を宣言します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>[_Canvas3D クラス] unlock3D</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>unlock3D</B></P>
+<P>OpenGL ES 描画の終了を宣言します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>[_Canvas3D クラス] setMultiSample:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setMultiSample:</B>(BOOL)flag</P>
+<P>マルチサンプル機能のＯＮ／ＯＦＦを切り替えます。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">flag</TD><TD>マルチサンプル機能を使用する場合 YES、使用しない場合 NO</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>[_Canvas3D クラス] multiSample</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (BOOL)<B>multiSample</B></P>
+<P>マルチサンプル機能のＯＮ／ＯＦＦ状態を取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+マルチサンプル機能を使用する設定になっている場合 YES、使用しない設定になっている場合 NO</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_frameTime</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>_frameTime</B></P>
+<P>本メソッドをオーバーライドして、1フレームの時間（ミリ秒）を返してください。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_touchNum</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>_touchNum</B></P>
+<P>本メソッドをオーバーライドして、マルチタッチ最大数を返してください。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>[_Canvas3D クラス] _multiSample</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (BOOL)<B>_multiSample</B></P>
+<P>本メソッドをオーバーライドして、起動時にマルチサンプル機能を有効にするかどうかを返してください。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_init<BR>
+_init3D</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_init</B> [_Canvas クラス]<BR>
+- (void)<B>_init3D</B> [_Canvas3D クラス]</P>
+<P>キャンバスの初期化時に呼ばれるメソッドです。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+_init3D メソッドの中で、OpenGL ES の初期化処理を行ってください。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>[_Canvas3D クラス] _reset3D</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_reset3D</B></P>
+<P>キャンバスが初期化された状態で、高解像度モードのＯＮ／ＯＦＦが切り替えられた時に呼ばれるメソッドです。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+本メソッドの中で、OpenGL ES の再設定処理を行ってください。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_end<BR>
+_end3D</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_end</B> [_Canvas クラス]<BR>
+- (void)<B>_end3D</B> [_Canvas3D クラス]</P>
+<P>キャンバスの終了時に呼ばれるメソッドです。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+_end3D メソッドの中で、OpenGL ES の終了処理を行ってください。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_paint:<BR>
+_paint3D:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_paint:</B>(_Graphics*)g [_Canvas クラス]<BR>
+- (void)<B>_paint3D:</B>(_Graphics*)g [_Canvas3D クラス]</P>
+<P>キャンバスに表示するために使用するメソッドです。このメソッドは、タイマーにより呼び出されます。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">g</TD><TD>描画に使用する _Graphics オブジェクトが渡されます。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+_paint3D: メソッドの中で、OpenGL ES の描画処理および _Graphics オブジェクトを使った描画処理を行ってください。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_suspend</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_suspend</B></P>
+<P>アプリケーションがサスペンド状態になった直後に呼ばれるメソッドです。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_resume</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_resume</B></P>
+<P>アプリケーションがサスペンド状態から戻った直後に呼ばれるメソッドです。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_processEvent::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_processEvent:</B>(int)type <B>:</B>(int)param</P>
+<P>イベントが通知されたときに呼ばれるメソッドです。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">type</TD><TD>イベントのタイプが渡されます。</TD></TR>
+<TR><TD valign="top">param</TD><TD>イベントのパラメータが渡されます。パラメータの意味はイベントによって異なります。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+イベントのタイプには、次のものがあります。<BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR>
+<TD valign="top">TOUCH_DOWN_EVENT</TD>
+<TD>画面をタッチダウンすると通知されます。パラメータには、タッチIDが渡されます。</TD>
+</TR>
+<TR>
+<TD valign="top">TOUCH_MOVE_EVENT</TD>
+<TD>画面をムーブすると通知されます。パラメータには、タッチIDが渡されます。</TD>
+</TR>
+<TR>
+<TD valign="top">TOUCH_UP_EVENT</TD>
+<TD>画面をタッチアップすると通知されます。パラメータには、タッチIDが渡されます。</TD>
+</TR>
+<TR>
+<TD valign="top">LAYOUT_DOWN_EVENT</TD>
+<TD>レイアウトをタッチダウンすると通知されます。パラメータには、レイアウトIDが渡されます。本イベントが通知されたときは、TOUCH_DOWN_EVENT は通知されません。</TD>
+</TR>
+<TR>
+<TD valign="top">LAYOUT_UP_EVENT</TD>
+<TD>レイアウトをタッチアップすると通知されます。パラメータには、レイアウトIDが渡されます。本イベントが通知されたときは、TOUCH_UP_EVENT は通知されません。</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_onOrientationChange:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_onOrientationChange:</B>(UIInterfaceOrientation)orientation</P>
+<P>画面の向きが変更されたときに呼ばれるメソッドです。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">orientation</TD><TD>変更後の画面の向きが渡されます。<BR>
+<BR>
+<TABLE border="0" cellpadding="0" cellspacing="0">
+<TR><TD valign="top">UIInterfaceOrientationPortrait</TD><TD>　ホームボタン下</TD></TR>
+<TR><TD valign="top">UIInterfaceOrientationLandscapeLeft</TD><TD>　ホームボタン左</TD></TR>
+<TR><TD valign="top">UIInterfaceOrientationLandscapeRight</TD><TD>　ホームボタン右</TD></TR>
+<TR><TD valign="top">UIInterfaceOrientationPortraitUpsideDown</TD><TD>　ホームボタン上</TD></TR>
+</TABLE>
+</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_gameCenterAuthOK</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_gameCenterAuthOK</B></P>
+<P>Game Center の認証に成功したときに呼ばれるメソッドです。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_gameCenterAuthNG</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_gameCenterAuthNG</B></P>
+<P>Game Center の認証に失敗したときに呼ばれるメソッドです。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_gameCenterReportAchievementOK::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_gameCenterReportAchievementOK:</B>(NSString*)identifier <B>:</B>(float)percent</P>
+<P>Game Center への達成状況の報告に成功したときに呼ばれるメソッドです。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">identifier</TD><TD>報告したアチーブメント識別子</TD></TR>
+<TR><TD valign="top">percent</TD><TD>報告した達成状況</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_gameCenterReportAchievementNG::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_gameCenterReportAchievementNG:</B>(NSString*)identifier <B>:</B>(float)percent</P>
+<P>Game Center への達成状況の報告に失敗したときに呼ばれるメソッドです。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">identifier</TD><TD>報告したアチーブメント識別子</TD></TR>
+<TR><TD valign="top">percent</TD><TD>報告した達成状況</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_gameCenterCloseAchievementView</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_gameCenterCloseAchievementView</B></P>
+<P>標準アチーブメントビューが閉じられたときに呼ばれるメソッドです。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_gameCenterReportScoreOK::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_gameCenterReportScoreOK:</B>(NSString*)category <B>:</B>(int64_t)score</P>
+<P>Game Center へのスコアの報告に成功したときに呼ばれるメソッドです。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">category</TD><TD>報告した Leaderboard 識別子</TD></TR>
+<TR><TD valign="top">score</TD><TD>報告したスコア</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_gameCenterReportScoreNG::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_gameCenterReportScoreNG:</B>(NSString*)category <B>:</B>(int64_t)score</P>
+<P>Game Center へのスコアの報告に失敗したときに呼ばれるメソッドです。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">category</TD><TD>報告した Leaderboard 識別子</TD></TR>
+<TR><TD valign="top">score</TD><TD>報告したスコア</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_gameCenterCloseLeaderboardView</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_gameCenterCloseLeaderboardView</B></P>
+<P>標準 Leaderboard ビューが閉じられたときに呼ばれるメソッドです。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_onHttpResponse:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_onHttpResponse:</B>(NSData*)data</P>
+<P>通信成功したときに呼ばれるメソッドです。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">data</TD><TD>レスポンスデータとして、NSData オブジェクトが渡されます。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_onHttpError:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_onHttpError:</B>(int)status</P>
+<P>通信失敗したときに呼ばれるメソッドです。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">status</TD><TD>HTTPステータスコードが渡されます。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_inAppPurchaseInvalid:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_inAppPurchaseInvalid:</B>(NSString*)identifier</P>
+<P>_InAppPurchase クラスの purchase: メソッドに指定したプロダクトIDが無効なときに呼ばれるメソッドです。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">identifier</TD><TD>プロダクトID</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_inAppPurchasePurchaseOK::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_inAppPurchasePurchaseOK:</B>(NSString*)identifier <B>:</B>(NSData*)receipt</P>
+<P>購入処理に成功したときに呼ばれるメソッドです。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">identifier</TD><TD>プロダクトID</TD></TR>
+<TR><TD valign="top">receipt</TD><TD>レシートデータが渡されます。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_inAppPurchasePurchaseNG:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_inAppPurchasePurchaseNG:</B>(NSString*)identifier</P>
+<P>購入処理に失敗したときに呼ばれるメソッドです。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">identifier</TD><TD>プロダクトID</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_inAppPurchaseRestoreOK:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_inAppPurchaseRestoreOK:</B>(NSString*)identifier</P>
+<P>リストア処理に成功したときに呼ばれるメソッドです。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">identifier</TD><TD>プロダクトID</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_inAppPurchaseRestoreNG</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_inAppPurchaseRestoreNG</B></P>
+<P>リストア処理に失敗したときに呼ばれるメソッドです。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_inAppPurchaseRestoreCompleted</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_inAppPurchaseRestoreCompleted</B></P>
+<P>全てのリストア処理が終了したときに呼ばれるメソッドです。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_inAppPurchaseCancelled:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_inAppPurchaseCancelled:</B>(NSString*)identifier</P>
+<P>購入処理またはリストア処理がキャンセルされたときに呼ばれるメソッドです。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">identifier</TD><TD>プロダクトID</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_musicComplete:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_musicComplete:</B>(id)music</P>
+<P>BGM再生が完了したら呼ばれるメソッドです。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">music</TD><TD>再生が完了した _Music オブジェクトが渡されます。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_twitterAuthOK</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_twitterAuthOK</B></P>
+<P>Twitter の認証に成功したときに呼ばれるメソッドです。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_twitterAuthNG</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_twitterAuthNG</B></P>
+<P>Twitter の認証に失敗したときに呼ばれるメソッドです。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_twitterTweetOK</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_twitterTweetOK</B></P>
+<P>ツイートに成功したときに呼ばれるメソッドです。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_twitterTweetNG:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_twitterTweetNG:</B>(int)status</P>
+<P>ツイートに失敗したときに呼ばれるメソッドです。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">status</TD><TD>HTTPステータスコードが渡されます。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_twitterCloseTweetComposeView</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_twitterCloseTweetComposeView</B></P>
+<P>標準ツイートビューが閉じられたときに呼ばれるメソッドです。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_onWebViewShouldStartLoad::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (BOOL)<B>_onWebViewShouldStartLoad:</B>(NSString*)url <B>:</B>(NSString*)mainUrl</P>
+<P>新しいURLが指定されたときに呼ばれるメソッドです。<BR>
+リクエストを中止する場合 YES を返してください。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">url</TD><TD>URLが渡されます。</TD></TR>
+<TR><TD valign="top">mainUrl</TD><TD>メインドキュメントURLが渡されます。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+_onWebViewShouldStartLoad:: 内で<BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR>
+<TD>if( [url hasPrefix:@"native://"] )<BR>
+{<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;NSString* command = [url substringFromIndex:9];<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;if( [command isEqualToString:@"command1"] )<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;{<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// ネイティブ処理<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;}<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;return YES;<BR>
+}</TD>
+</TR>
+</TABLE>
+のように実装し、JavaScript側で<BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR>
+<TD>location.href = "native://command1";</TD>
+</TR>
+</TABLE>
+と実行することで、JavaScriptからネイティブ処理を呼び出すことができます。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_onWebViewStartLoad::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_onWebViewStartLoad:</B>(NSString*)url <B>:</B>(NSString*)mainUrl</P>
+<P>ページ読み込み開始時に呼ばれるメソッドです。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">url</TD><TD>URLが渡されます。</TD></TR>
+<TR><TD valign="top">mainUrl</TD><TD>メインドキュメントURLが渡されます。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_onWebViewFinishLoad:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_onWebViewFinishLoad:</B>(id)webView</P>
+<P>ページ読み込み完了時に呼ばれるメソッドです。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">webView</TD><TD>_WebView オブジェクトが渡されます。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>_onWebViewLoadError::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>_onWebViewLoadError:</B>(NSError*)error <B>:</B>(id)webView</P>
+<P>ページ読み込みエラー時に呼ばれるメソッドです。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">error</TD><TD>NSError オブジェクトが渡されます。</TD></TR>
+<TR><TD valign="top">webView</TD><TD>_WebView オブジェクトが渡されます。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<!--
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B></B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P><B></B></P>
+<P></P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+</BODY>
+</HTML>

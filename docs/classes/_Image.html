@@ -1,0 +1,357 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>D2iPドキュメント</TITLE>
+</HEAD>
+<BODY>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR height="100">
+<TD bgcolor="#cccccc">
+<P><FONT size="+2"><B>クラス _Image</B></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>イメージを保持するクラスです。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR bgcolor="#cccccc">
+<TD><FONT size="+2"><B>インスタンスメソッド</B></FONT></TD>
+</TR>
+</TABLE>
+</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>attach:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>attach:</B>(UIImage*)image</P>
+<P>UIImage オブジェクトをこのオブジェクトに割り当てます。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">image</TD><TD>割り当てる UIImage オブジェクト</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+このオブジェクトを解放しても、割り当てた UIImage オブジェクトは解放されません。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>load:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (BOOL)<B>load:</B>(NSString*)name</P>
+<P>ファイルからイメージを生成します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">name</TD><TD>リソースファイル名</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+正常に生成された場合 YES、生成に失敗した場合 NO</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>create:::<BR>
+create::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (BOOL)<B>create:</B>(int)width <B>:</B>(int)height <B>:</B>(BOOL)use_g<BR>
+- (BOOL)<B>create:</B>(int)width <B>:</B>(int)height</P>
+<P>指定サイズのイメージを生成します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">width</TD><TD>生成するイメージの幅を指定します。</TD></TR>
+<TR><TD valign="top">height</TD><TD>生成するイメージの高さを指定します。</TD></TR>
+<TR><TD valign="top">use_g</TD><TD>_Graphics オブジェクトを構築する場合 YES を、構築しない場合 NO を指定します。省略時は YES になります。</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+正常に生成された場合 YES、生成に失敗した場合 NO</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>mutable:<BR>
+mutable</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>mutable:</B>(BOOL)use_g<BR>
+- (void)<B>mutable</B></P>
+<P>ファイルから生成されたイメージを変更可能にします。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">use_g</TD><TD>_Graphics オブジェクトを構築する場合 YES を、構築しない場合 NO を指定します。省略時は YES になります。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>clear</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>clear</B></P>
+<P>イメージを透明色でクリアします。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+変更可能なイメージにのみ有効です。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getWidth</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getWidth</B></P>
+<P>イメージの幅を取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+イメージの幅を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getHeight</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getHeight</B></P>
+<P>イメージの高さを取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+イメージの高さを返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getGraphics</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (_Graphics*)<B>getGraphics</B></P>
+<P>イメージに描画するための _Graphics オブジェクトを取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+イメージに描画するための _Graphics オブジェクトを返します。</P>
+<P><B>補足説明：</B><BR>
+ファイルから生成された _Image オブジェクトでは、本メソッドを呼び出す前に mutable メソッドで変更可能にしておく必要があります。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getImage</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (UIImage*)<B>getImage</B></P>
+<P>UIImage オブジェクトを取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+UIImage オブジェクトを返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>allocImage</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (UIImage*)<B>allocImage</B></P>
+<P>UIImage オブジェクトのコピーを作成します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+作成された UIImage オブジェクトを返します。</P>
+<P><B>補足説明：</B><BR>
+使い終わったら UIImage オブジェクト自身の release メソッドを呼び出してメモリ解放する必要があります。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>pixels</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (unsigned char*)<B>pixels</B></P>
+<P>ピクセルデータへのポインタを取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+ピクセルデータへのポインタを返します。</P>
+<P><B>補足説明：</B><BR>
+create:::／create:: メソッドで生成されたイメージまたは mutable:／mutable メソッドで変更可能にしたイメージでのみ有効です。<BR>
+イメージは、上下反転された状態でメモリ格納されています。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>length</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>length</B></P>
+<P>ピクセルデータのデータ長を取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+ピクセルデータのデータ長を返します。</P>
+<P><B>補足説明：</B><BR>
+create:::／create:: メソッドで生成されたイメージまたは mutable:／mutable メソッドで変更可能にしたイメージでのみ有効です。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getPixels:::::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>getPixels:</B>(int)x <B>:</B>(int)y <B>:</B>(int)width <B>:</B>(int)height <B>:</B>(unsigned char*)pixels</P>
+<P>指定する領域のピクセル値を取得します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">x</TD><TD>領域の左上のX座標を指定します。</TD></TR>
+<TR><TD valign="top">y</TD><TD>領域の左上のY座標を指定します。</TD></TR>
+<TR><TD valign="top">width</TD><TD>領域の幅を指定します。</TD></TR>
+<TR><TD valign="top">height</TD><TD>領域の高さを指定します。</TD></TR>
+<TR><TD valign="top">pixels</TD><TD>ピクセル値はここに書き込まれます。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+1 ピクセル 4 バイト相当であらかじめ確保したメモリを引数 pixels に指定します。<BR>
+create:::／create:: メソッドで生成されたイメージまたは mutable:／mutable メソッドで変更可能にしたイメージでのみ有効です。<BR>
+pixels が上下反転したイメージメモリを取得するのに対し、本メソッドは左上隅を原点とするイメージメモリとなります。</P>
+
+<!--
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B></B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P><B></B></P>
+<P></P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+</BODY>
+</HTML>

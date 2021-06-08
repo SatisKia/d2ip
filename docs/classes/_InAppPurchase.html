@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>D2iPドキュメント</TITLE>
+</HEAD>
+<BODY>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR height="100">
+<TD bgcolor="#cccccc">
+<P><FONT size="+2"><B>クラス _InAppPurchase</B></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>In-App Purchase 機能を提供するクラスです。</P>
+
+<P>下記のフレームワークを追加する必要があります。</P>
+
+<P>・StoreKit.framework</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR bgcolor="#cccccc">
+<TD><FONT size="+2"><B>インスタンスメソッド</B></FONT></TD>
+</TR>
+</TABLE>
+</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>initWithMain:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (id)<B>initWithMain:</B>(_Main*)m</P>
+<P>_InAppPurchase オブジェクトを生成します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">m</TD><TD>_Main クラスを継承したクラスオブジェクトを指定します。</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+_InAppPurchase オブジェクト</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>isAvailable</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (BOOL)<B>isAvailable</B></P>
+<P>In-App Purchase が利用可能かどうかチェックします。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+In-App Purchase が利用できる場合 YES、利用できない場合 NO</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>purchase:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>purchase:</B>(NSString*)identifier</P>
+<P>プロダクトの購入処理を行います。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">identifier</TD><TD>プロダクトIDを指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+以下のメソッドが呼び出されます。<BR>
+・_Main クラスを継承したクラスの _inAppPurchaseInvalid:／_inAppPurchasePurchaseOK::／_inAppPurchasePurchaseNG:／_inAppPurchaseCancelled: メソッド<BR>
+・_Canvas／_Canvas3D クラスを継承したクラスの _inAppPurchaseInvalid:／_inAppPurchasePurchaseOK::／_inAppPurchasePurchaseNG:／_inAppPurchaseCancelled: メソッド</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>restore</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>restore</B></P>
+<P>プロダクトのリストア処理を行います。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+以下のメソッドが呼び出されます。<BR>
+・_Main クラスを継承したクラスの _inAppPurchaseRestoreOK:／_inAppPurchaseRestoreNG／_inAppPurchaseRestoreCompleted／_inAppPurchaseCancelled: メソッド<BR>
+・_Canvas／_Canvas3D クラスを継承したクラスの _inAppPurchaseRestoreOK:／_inAppPurchaseRestoreNG／_inAppPurchaseRestoreCompleted／_inAppPurchaseCancelled: メソッド</P>
+
+<!--
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B></B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P><B></B></P>
+<P></P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+</BODY>
+</HTML>

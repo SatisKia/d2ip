@@ -1,0 +1,239 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>D2iPドキュメント</TITLE>
+</HEAD>
+<BODY>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR height="100">
+<TD bgcolor="#cccccc">
+<P><FONT size="+2"><B>プロジェクトの作成</B></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>「HelloWorld」アプリケーションを実際に作成しながら、プロジェクトの作成の流れを説明していきます。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="6" height="6"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+2">
+<B>（1）プロジェクトを新規作成する</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+
+<P>「Xcode」を起動します。</P>
+
+<P><IMG src="project_1.png" height="300" border="0"></P>
+
+<P>「File」-「New」-「New Project...」を実行します。</P>
+
+<P><IMG src="project_2.png" width="600" border="0"></P>
+
+<P>左側の「iOS」の「Application」を選択し、「Empty Application」を選んで「Next」ボタンを押します。</P>
+
+<P><IMG src="project_3.png" width="600" border="0"></P>
+
+<P>「Product Name」に「<B>HelloWorld</B>」と入力<BR>
+「Company Identifier」に「<B>net.satis</B>」と入力<BR>
+「Device Family」を「iPhone」に<BR>
+「Use Core Data」のチェックを外す<BR>
+「Use Automatic Reference Counting」のチェックを外す<BR>
+「Include Unit Tests」のチェックを外す</P>
+
+<P>「Next」ボタンを押します。</P>
+
+<P>保存先を聞いてきますので、フォルダを選択して「Create」ボタンを押します。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="6" height="6"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+2">
+<B>（2）MyCanvasクラスをプロジェクトに追加する</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+
+<P><IMG src="project_4.png" height="300" border="0"></P>
+
+<P>「HelloWorld」グループをマウス右クリックして、「New File...」を実行します。</P>
+
+<P><IMG src="project_5.png" width="600" border="0"></P>
+
+<P>左側の「iOS」の「Cocoa Touch」を選択し、「Objective-C class」を選んで「Next」ボタンを押します。</P>
+
+<P><IMG src="project_6.png" width="600" border="0"></P>
+
+<P>「Class」に「<B>MyCanvas</B>」と入力<BR>
+「Subclass of」を、とりあえず「NSObject」に</P>
+
+<P>「Next」ボタンを押します。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="6" height="6"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+2">
+<B>（3）D2iPのファイルをプロジェクトに追加する</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+
+<P>「HelloWorld」グループに、「Finder」から以下のファイルをドラッグ＆ドロップします。</P>
+
+<P>_Canvas.h<BR>
+_Canvas.m<BR>
+_Graphics.h<BR>
+_Graphics.m<BR>
+_Main.h<BR>
+_Main.m</P>
+
+<P><IMG src="project_7.png" width="600" border="0"></P>
+
+<P>追加方法を聞いてきますので、「Copy items into destination group's folder (if needed)」のチェックを外し、「Create groups for any added folders」を選択して「Finish」ボタンを押します。</P>
+
+<P><IMG src="project_8.png" border="0"></P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="6" height="6"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+2">
+<B>（4）各種ファイルの内容を記述する</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+
+<P>各種ファイルの内容を、デフォルトの内容を一旦消去してから以下のように記述します。</P>
+
+<P>AppDelegate.h：<BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR>
+<TD>#import "_Main.h"<BR>
+<BR>
+@class MyCanvas;<BR>
+<BR>
+@interface AppDelegate : _Main<BR>
+{<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;MyCanvas* canvas;<BR>
+}<BR>
+@end</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>AppDelegate.m：<BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR>
+<TD>#import "AppDelegate.h"<BR>
+<BR>
+#import "MyCanvas.h"<BR>
+<BR>
+@implementation AppDelegate<BR>
+<BR>
+- (int)_orientation { return ORIENTATION_LANDSCAPE; }<BR>
+<BR>
+- (void)_start<BR>
+{<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;canvas = [[MyCanvas alloc] init];<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;[self setCurrent:canvas];<BR>
+}<BR>
+<BR>
+- (void)_destroy<BR>
+{<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;[canvas release];<BR>
+}<BR>
+<BR>
+@end</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>MyCanvas.h：<BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR>
+<TD>#import &lt;Foundation/Foundation.h&gt;<BR>
+<BR>
+#import "_Canvas.h"<BR>
+<BR>
+@interface MyCanvas : _Canvas<BR>
+{<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;NSString* str;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;int w, h;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;int x, y;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;int dx, dy;<BR>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;int elapse;<BR>
+}<BR>
+@end</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>MyCanvas.m：<BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR>
+<TD>#import "MyCanvas.h"<BR>
+<BR>
+@implementation MyCanvas<BR>
+<BR>
+- (int)_frameTime { return 33/*1000 / 30*/; }<BR>
+<BR>
+- (void)_init<BR>
+{<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;_Graphics* g = [self getGraphics];<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;[g setFontSize:20];<BR>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;str = [[NSString stringWithString:@"Hello World !!"] retain];<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;w = [g stringWidth:str];<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;h = [g fontHeight];<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;x = 0;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;y = h;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;dx = 5;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;dy = 5;<BR>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;elapse = 0;<BR>
+}<BR>
+<BR>
+- (void)_end<BR>
+{<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;[str release];<BR>
+}<BR>
+<BR>
+- (void)_paint:(_Graphics*)g<BR>
+{<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;elapse++;<BR>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;x += dx;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;if( (x &lt;= 0) || (x &gt;= [self getWidth] - w) )<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;{<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dx = -dx;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;}<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;y += dy;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;if( (y &lt;= h) || (y &gt;= [self getHeight]) )<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;{<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dy = -dy;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;}<BR>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;[g lock];<BR>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;[g setColor:[_Graphics getColorOfRGB:255 :255 :255]];<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;[g fillRect:0 :0 :[self getWidth] :[self getHeight]];<BR>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;[g setColor:[_Graphics getColorOfRGB:0 :0 :255]];<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;[g drawString:[NSString stringWithFormat:@"%d", elapse] :0 :24];<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;[g drawString:str :x :y];<BR>
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;[g unlock];<BR>
+}<BR>
+<BR>
+@end</TD>
+</TR>
+</TABLE>
+</P>
+
+</BODY>
+</HTML>

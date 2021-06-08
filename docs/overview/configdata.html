@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>D2iPドキュメント</TITLE>
+</HEAD>
+<BODY>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR height="100">
+<TD bgcolor="#cccccc">
+<P><FONT size="+2"><B>アプリ設定データの読み書き</B></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>アプリ設定データの読み書きには、_Preference クラスを使用します。</P>
+
+<P>配列形式で読み書きする方法と、パラメータ形式で読み書きする方法があります。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="6" height="6"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+2">
+<B>配列形式での読み書き</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+
+<P>データを書き込んだ順番で、データを読み出す方法です。配列データの読み書きに便利です。</P>
+
+<P>データを書き込むプログラムは、例えば次のようになります。</P>
+
+<P>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR>
+<TD>int save[3];<BR>
+<BR>
+save[0] = 123;<BR>
+save[1] = 45;<BR>
+save[2] = 67;<BR>
+<BR>
+_Preference* p = [[_Preference alloc] init];<BR>
+[p beginWrite];<BR>
+for( int i = 0; i &lt; 3; i++ )<BR>
+{<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;[p write:[NSString stringWithFormat:@"%d", save[i]]];<BR>
+}<BR>
+[p endWrite];<BR>
+[p release];</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>このデータを読み込むプログラムは、例えば次のようになります。</P>
+
+<P>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR>
+<TD>int save[3];<BR>
+<BR>
+_Preference* p = [[_Preference alloc] init];<BR>
+[p beginRead];<BR>
+for( int i = 0; i &lt; 3; i++ )<BR>
+{<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;save[i] = [[p read:@"0"] intValue];<BR>
+}<BR>
+[p endRead];<BR>
+[p release];</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="6" height="6"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+2">
+<B>パラメータ形式での読み書き</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+
+<P>データをパラメータ形式で書き込み、キー文字列を指定して読み出す方法です。</P>
+
+<P>データを書き込むプログラムは、例えば次のようになります。</P>
+
+<P>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR>
+<TD>int score = 12345;<BR>
+int stage = 6;<BR>
+int level = 7;<BR>
+<BR>
+_Preference* p = [[_Preference alloc] init];<BR>
+[p setParameter:@"sc" :[NSString stringWithFormat:@"%d", score]];<BR>
+[p setParameter:@"st" :[NSString stringWithFormat:@"%d", stage]];<BR>
+[p setParameter:@"lv" :[NSString stringWithFormat:@"%d", level]];<BR>
+[p release];</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>このデータを読み込むプログラムは、例えば次のようになります。</P>
+
+<P>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR>
+<TD>_Preference* p = [[_Preference alloc] init];<BR>
+int level = [[p getParameter:@"lv" :@"0"] intValue];<BR>
+int score = [[p getParameter:@"sc" :@"0"] intValue];<BR>
+[p release];</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>これで、変数 level には値 7 が、変数 score には値 12345 が入ります。</P>
+
+</BODY>
+</HTML>

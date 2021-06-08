@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>D2iPドキュメント</TITLE>
+</HEAD>
+<BODY>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR height="100">
+<TD bgcolor="#cccccc">
+<P><FONT size="+2"><B>D2iPの概要</B></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>「D2iP」は、DoJa風のアプリの流れ、イベント処理、グラフィック処理でiPhoneアプリを作成できるフレームワークです。</P>
+
+<P>「D2iP」はコンバーターではありません。iアプリとの代表的な違いとして、次の点が挙げられます。</P>
+
+<DL>
+<DT><B>●記述言語はObjective-C言語ですので、クラス・メソッドの呼び出し方法、配列の宣言の記述等、Java言語と異なります。</B></DT>
+<DD><BR>Java言語の記述からObjective-C言語への変換は、手動で行う必要があります。</DD>
+</DL>
+
+<DL>
+<DT><B>●メモリ解放を手動で行う必要があります。</B></DT>
+<DD><BR>構築したオブジェクトは、release メソッドを呼び出して手動で解放する必要があります。</DD>
+</DL>
+
+<DL>
+<DT><B>●画面サイズの変更に伴い、使用するイメージの解像度や画面デザインを変更する必要があります。</B></DT>
+<DD><BR>iアプリからの移植の場合、画面デザインについて一旦ベタ移植した後、見栄えを良くしていく方法もあります。</DD>
+</DL>
+
+<DL>
+<DT><B>●キー操作を、画面タッチでの操作に変更する必要があります。</B></DT>
+<DD><BR>「D2iP」では、タッチイベントが検知できます。また、レイアウトを適用すると、レイアウトタッチイベントも検知できるようになります。</DD>
+</DL>
+
+</BODY>
+</HTML>

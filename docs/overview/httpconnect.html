@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>D2iPドキュメント</TITLE>
+</HEAD>
+<BODY>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR height="100">
+<TD bgcolor="#cccccc">
+<P><FONT size="+2"><B>サーバーとの通信</B></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>サーバーと通信するには、_HttpRequest クラスを使用します。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="6" height="6"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+2">
+<B>GETリクエストを送信</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+
+<P>_HttpRequest クラスの <B>get:</B> メソッドを使用します。以下にプログラム例を示します。変数 http はあらかじめ構築された _HttpRequest オブジェクト、変数 server はサーバーURLの文字列です。</P>
+
+<P>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR>
+<TD>_String* url = [[_String alloc] init];<BR>
+[[url set:server] add:@"test1.php?user=guest"];<BR>
+<BR>
+[http get:[url str]];<BR>
+<BR>
+[url release];</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="6" height="6"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+2">
+<B>POSTリクエストを送信</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+
+<P>_HttpRequest クラスの <B>post:::</B> メソッドを使用します。以下にプログラム例を示します。変数 http はあらかじめ構築された _HttpRequest オブジェクト、変数 server はサーバーURLの文字列です。</P>
+
+<P>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR>
+<TD>_String* url = [[_String alloc] init];<BR>
+[[url set:server] add:@"test2.php"];<BR>
+<BR>
+_String* post_str = [[_String alloc] init];<BR>
+[post_str set:@"user=guest"];<BR>
+NSData* post_data = [post_str allocData:NSShiftJISStringEncoding];<BR>
+<BR>
+[http post:[url str] :post_data :nil];<BR>
+<BR>
+[post_data release];<BR>
+[post_str release];<BR>
+<BR>
+[url release];</TD>
+</TR>
+</TABLE>
+</P>
+ 
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="6" height="6"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+2">
+<B>通信中のステータス検知</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+
+<P>通信中、_HttpRequest クラスの <B>busy</B> メソッドの戻り値が YES になります。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="6" height="6"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+2">
+<B>サーバーからレスポンス受信</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+
+<P>_HttpRequest クラスの get:／post::: メソッドで正常に通信開始し、サーバーからレスポンス受信した場合、_Main クラスを継承したクラスの <B>_onHttpResponse:</B> メソッドまたは <B>_onHttpError:</B> メソッドが呼び出されます。また、_Canvas／_Canvas3D クラスを継承したクラスの <B>_onHttpResponse:</B> メソッドまたは <B>_onHttpError:</B> メソッドも呼び出されます。</P>
+
+</BODY>
+</HTML>

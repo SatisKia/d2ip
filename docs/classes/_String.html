@@ -1,0 +1,484 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>D2iPドキュメント</TITLE>
+</HEAD>
+<BODY>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR height="100">
+<TD bgcolor="#cccccc">
+<P><FONT size="+2"><B>クラス _String</B></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>文字列を保持するクラスです。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR bgcolor="#cccccc">
+<TD><FONT size="+2"><B>インスタンスメソッド</B></FONT></TD>
+</TR>
+</TABLE>
+</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>set:<BR>
+set:::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (_String*)<B>set:</B>(NSString*)str<BR>
+- (_String*)<B>set:</B>(NSString*)str <B>:</B>(int)beginIndex <B>:</B>(int)endIndex</P>
+<P>文字列を設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">str</TD><TD>設定する文字列を指定します。</TD></TR>
+<TR><TD valign="top">beginIndex</TD><TD>設定する文字列の中の、開始インデックス（この値を含む）</TD></TR>
+<TR><TD valign="top">endIndex</TD><TD>設定する文字列の中の、終了インデックス（この値を含まない）<BR>
+部分文字列は、指定された beginIndex から始まり、インデックス endIndex - 1 にある文字までです。したがって、部分文字列の長さは endIndex - beginIndex になります。</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+このオブジェクトを返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setCStr:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (_String*)<B>setCStr:</B>(char*)str</P>
+<P>C言語文字列を設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">str</TD><TD>設定するC言語文字列を指定します。</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+このオブジェクトを返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setData::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (_String*)<B>setData:</B>(NSData*)data <B>:</B>(NSStringEncoding)encoding</P>
+<P>NSData オブジェクトを文字列に変換して設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">data</TD><TD>指定された NSData オブジェクトが文字列に変換されたものを設定します。</TD></TR>
+<TR><TD valign="top">encoding</TD><TD>エンコーディングを指定します。</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+このオブジェクトを返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setInt:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (_String*)<B>setInt:</B>(int)val</P>
+<P>値を文字列に変換して設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">val</TD><TD>指定された値が文字列に変換されたものを設定します。</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+このオブジェクトを返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>add:<BR>
+add:::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (_String*)<B>add:</B>(NSString*)str<BR>
+- (_String*)<B>add:</B>(NSString*)str <B>:</B>(int)beginIndex <B>:</B>(int)endIndex</P>
+<P>文字列を追加します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">str</TD><TD>追加する文字列を指定します。</TD></TR>
+<TR><TD valign="top">beginIndex</TD><TD>追加する文字列の中の、開始インデックス（この値を含む）</TD></TR>
+<TR><TD valign="top">endIndex</TD><TD>追加する文字列の中の、終了インデックス（この値を含まない）<BR>
+部分文字列は、指定された beginIndex から始まり、インデックス endIndex - 1 にある文字までです。したがって、部分文字列の長さは endIndex - beginIndex になります。</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+このオブジェクトを返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>addCStr:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (_String*)<B>addCStr:</B>(char*)str</P>
+<P>C言語文字列を追加します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">str</TD><TD>追加するC言語文字列を指定します。</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+このオブジェクトを返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>addData::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (_String*)<B>addData:</B>(NSData*)data <B>:</B>(NSStringEncoding)encoding</P>
+<P>NSData オブジェクトを文字列に変換して追加します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">data</TD><TD>指定された NSData オブジェクトが文字列に変換されたものを追加します。</TD></TR>
+<TR><TD valign="top">encoding</TD><TD>エンコーディングを指定します。</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+このオブジェクトを返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>addInt:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (_String*)<B>addInt:</B>(int)val</P>
+<P>値を文字列に変換して追加します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">val</TD><TD>指定された値が文字列に変換されたものを追加します。</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+このオブジェクトを返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>length</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>length</B></P>
+<P>この文字列の長さを返します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+この文字列の長さ</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>equals:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (BOOL)<B>equals:</B>(NSString*)str</P>
+<P>この文字列と指定された文字列を比較します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">str</TD><TD>この文字列と比較される文字列</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+指定された文字列がこの文字列に等しい場合 YES、そうでない場合 NO</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>indexOf:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>indexOf:</B>(NSString*)str</P>
+<P>この文字列内で、指定された部分文字列が最初に出現する位置のインデックスを返します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">str</TD><TD>任意の文字列</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+この文字列内で、指定された部分文字列が最初に出現する位置のインデックス。部分文字列がない場合は -1</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>startsWith:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (BOOL)<B>startsWith:</B>(NSString*)str</P>
+<P>この文字列が、指定された接頭辞で始まるかどうかを判定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">str</TD><TD>接頭辞</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+指定された接頭辞で始まる場合 YES、そうでない場合 NO</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>endsWith:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (BOOL)<B>endsWith:</B>(NSString*)str</P>
+<P>この文字列が、指定された接尾辞で終わるかどうかを判定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">str</TD><TD>接尾辞</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+指定された接尾辞で終わる場合 YES、そうでない場合 NO</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>parseInt</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>parseInt</B></P>
+<P>文字列を符号付き10進数の整数型として構文解析します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+10進数の引数で表される整数値</P>
+<P><B>補足説明：</B><BR>
+Javaでの Integer クラスの parseInt() メソッドに相当する機能です。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>str</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (NSString*)<B>str</B></P>
+<P>NSString オブジェクトを取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+NSString オブジェクトを返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>allocCStr</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (char*)<B>allocCStr</B></P>
+<P>C言語文字列を構築します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+構築されたC言語文字列</P>
+<P><B>補足説明：</B><BR>
+構築されたC言語文字列は、不要になったら free() で解放する必要があります。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>allocData:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (NSData*)<B>allocData:</B>(NSStringEncoding)encoding</P>
+<P>NSData オブジェクトを構築します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">encoding</TD><TD>エンコーディングを指定します。</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+構築された NSData オブジェクト</P>
+<P><B>補足説明：</B><BR>
+構築された NSData オブジェクトは、不要になったら解放する必要があります。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>charAt:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (NSString*)<B>charAt:</B>(int)index</P>
+<P>指定されたインデックス位置にある文字を返します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">index</TD><TD>文字のインデックス</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+文字列内の指定されたインデックス位置にある文字</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>charCodeAt:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>charCodeAt:</B>(int)index</P>
+<P>指定されたインデックス位置にある文字のコードを返します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">index</TD><TD>文字のインデックス</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+文字列内の指定されたインデックス位置にある文字のコード</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<!--
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B></B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P><B></B></P>
+<P></P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+</BODY>
+</HTML>

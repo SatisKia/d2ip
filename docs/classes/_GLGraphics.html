@@ -1,0 +1,633 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>D2iPドキュメント</TITLE>
+</HEAD>
+<BODY>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR height="100">
+<TD bgcolor="#cccccc">
+<P><FONT size="+2"><B>クラス _GLGraphics</B></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>OpenGL ES を使用して、イメージ、シェイプを描画する機能を提供するクラスです。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR bgcolor="#cccccc">
+<TD><FONT size="+2"><B>クラスメソッド</B></FONT></TD>
+</TR>
+</TABLE>
+</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getColorOfRGB:::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>+ (int)<B>getColorOfRGB:</B>(int)r <B>:</B>(int)g <B>:</B>(int)b</P>
+<P>RGB値を指定して、対応するカラーを表す整数値を取得します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">r</TD><TD>赤要素の輝度を指定します（0～255）。</TD></TR>
+<TR><TD valign="top">g</TD><TD>緑要素の輝度を指定します（0～255）。</TD></TR>
+<TR><TD valign="top">b</TD><TD>青要素の輝度を指定します（0～255）。</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+カラーを表す値を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR bgcolor="#cccccc">
+<TD><FONT size="+2"><B>インスタンスメソッド</B></FONT></TD>
+</TR>
+</TABLE>
+</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>initWithTexture:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (id)<B>initWithTexture:</B>(_GLTexture*)glt</P>
+<P>_GLGraphics オブジェクトを生成します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">glt</TD><TD>_GLTexture／_GLTexture2 クラスを継承したクラスオブジェクトを指定します。</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+_GLGraphics オブジェクト</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>reset</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>reset</B></P>
+<P>_GLGraphics オブジェクトの再設定を行います。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+_Canvas3D クラスを継承したクラスの _reset3D メソッド内で、本メソッドを呼び出す必要があります。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setSize::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setSize:</B>(int)width <B>:</B>(int)height</P>
+<P>描画領域のサイズを設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">width</TD><TD>描画領域の幅を指定します。</TD></TR>
+<TR><TD valign="top">height</TD><TD>描画領域の高さを指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setScale:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setScale:</B>(float)scale</P>
+<P>拡大率を設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">scale</TD><TD>拡大率を指定します。1.0f で等倍になります。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>scale</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (float)<B>scale</B></P>
+<P>拡大率を取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+拡大率を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>scaledValue:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>scaledValue:</B>(int)val</P>
+<P>整数値をスケーリングして返します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">val</TD><TD>整数値</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+スケーリングされた整数値</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getWidth</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getWidth</B></P>
+<P>描画領域の幅を取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+描画領域の幅を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getHeight</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getHeight</B></P>
+<P>描画領域の高さを取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+描画領域の高さを返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setLineWidth:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setLineWidth:</B>(float)width</P>
+<P>線幅を設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">width</TD><TD>線幅を指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+drawLine:::: メソッドでのみ有効です。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setColor:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setColor:</B>(int)color</P>
+<P>描画に使用する色を設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">color</TD><TD>描画に使用する色を指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setAlpha:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setAlpha:</B>(int)a</P>
+<P>描画で参照されるα値を設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">a</TD><TD>α値を指定します（0～255）。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+α値とは、255 で不透明、0 で完全な透明になる値です。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setROP:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setROP:</B>(int)mode</P>
+<P>ラスタオペレーションを設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">mode</TD><TD>ラスタオペレーションを指定します。次のいずれかを指定します。<BR>
+<BR>
+<TABLE border="0" cellpadding="0" cellspacing="0">
+<TR><TD>ROP_COPY</TD><TD>　通常合成。</TD></TR>
+<TR><TD>ROP_ADD</TD><TD>　加算合成。</TD></TR>
+</TABLE>
+</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setFlipMode:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setFlipMode:</B>(int)flipmode</P>
+<P>テクスチャの描画時に反転または回転して描画を行うかどうかを設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">flipmode</TD><TD>テクスチャの描画時の反転または回転方法を指定します。次のいずれかを指定します。<BR>
+<BR>
+<TABLE border="0" cellpadding="0" cellspacing="0">
+<TR><TD>FLIP_NONE</TD><TD>　反転しないことを表します。</TD></TR>
+<TR><TD>FLIP_HORIZONTAL</TD><TD>　横方向に鏡像反転することを表します。</TD></TR>
+<TR><TD>FLIP_VERTICAL</TD><TD>　縦方向に鏡像反転することを表します。</TD></TR>
+<TR><TD>FLIP_ROTATE</TD><TD>　縦横方向に鏡像反転（180度回転）することを表します。</TD></TR>
+</TABLE>
+</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setOrigin::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setOrigin:</B>(int)x <B>:</B>(int)y</P>
+<P>描画の際の座標原点を設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">x</TD><TD>X方向のオフセット値を指定します。</TD></TR>
+<TR><TD valign="top">y</TD><TD>Y方向のオフセット値を指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>drawLine::::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>drawLine:</B>(int)x1 <B>:</B>(int)y1 <B>:</B>(int)x2 <B>:</B>(int)y2</P>
+<P>直線を描画します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">x1</TD><TD>直線の描画開始点のX座標を指定します。</TD></TR>
+<TR><TD valign="top">y1</TD><TD>直線の描画開始点のY座標を指定します。</TD></TR>
+<TR><TD valign="top">x2</TD><TD>直線の描画終了点のX座標を指定します。</TD></TR>
+<TR><TD valign="top">y2</TD><TD>直線の描画終了点のY座標を指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+_Canvas3D クラスの lock3D メソッドから unlock3D メソッドの間で有効です。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>drawRect::::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>drawRect:</B>(int)x <B>:</B>(int)y <B>:</B>(int)width <B>:</B>(int)height</P>
+<P>矩形を描画します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">x</TD><TD>矩形の左上のX座標を指定します。</TD></TR>
+<TR><TD valign="top">y</TD><TD>矩形の左上のY座標を指定します。</TD></TR>
+<TR><TD valign="top">width</TD><TD>矩形の幅を指定します。</TD></TR>
+<TR><TD valign="top">height</TD><TD>矩形の高さを指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+_Canvas3D クラスの lock3D メソッドから unlock3D メソッドの間で有効です。<BR>
+横方向には x 番目から x + w 番目のピクセル（w + 1 個）が描画され、縦方向には y 番目から y + h 番目のピクセル（h + 1 個）が描画されます。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>fillRect::::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>fillRect:</B>(int)x <B>:</B>(int)y <B>:</B>(int)width <B>:</B>(int)height</P>
+<P>矩形領域を塗りつぶします。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">x</TD><TD>矩形の左上のX座標を指定します。</TD></TR>
+<TR><TD valign="top">y</TD><TD>矩形の左上のY座標を指定します。</TD></TR>
+<TR><TD valign="top">width</TD><TD>矩形の幅を指定します。</TD></TR>
+<TR><TD valign="top">height</TD><TD>矩形の高さを指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+_Canvas3D クラスの lock3D メソッドから unlock3D メソッドの間で有効です。<BR>
+横方向には x 番目から x + w - 1 番目のピクセル（w 個）が塗りつぶされ、縦方向には y 番目から y + h - 1 番目のピクセル（h 個）が塗りつぶされます。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>lockTexture:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>lockTexture:</B>(int)tex_index</P>
+<P>テクスチャの使用を宣言します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">tex_index</TD><TD>使用宣言するテクスチャ・リソースのインデックスを指定します。負の値を指定すると、描画色が使用されます。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+同じテクスチャに対して描画メソッドを連続して呼び出す場合、本メソッドでテクスチャの使用を宣言してから、描画メソッドを連続して呼び出した後、unlockTexture メソッドで使用宣言を解除することで、処理の高速化が図れます。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>unlockTexture</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>unlockTexture</B></P>
+<P>テクスチャの使用宣言を解除します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>drawTexture:::<BR>
+drawTexture:::::::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>drawTexture:</B>(int)tex_index <B>:</B>(int)x <B>:</B>(int)y<BR>
+- (void)<B>drawTexture:</B>(int)tex_index <B>:</B>(int)dx <B>:</B>(int)dy <B>:</B>(int)sx <B>:</B>(int)sy <B>:</B>(int)width <B>:</B>(int)height</P>
+<P>テクスチャを描画します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">tex_index</TD><TD>描画するテクスチャ・リソースのインデックスを指定します。負の値を指定すると、描画色が使用されます。</TD></TR>
+<TR><TD valign="top">x</TD><TD>X座標を指定します。</TD></TR>
+<TR><TD valign="top">y</TD><TD>Y座標を指定します。</TD></TR>
+<TR><TD valign="top">dx</TD><TD>描画先のX座標を指定します。</TD></TR>
+<TR><TD valign="top">dy</TD><TD>描画先のY座標を指定します。</TD></TR>
+<TR><TD valign="top">sx</TD><TD>描画元の矩形の左上のX座標を指定します。</TD></TR>
+<TR><TD valign="top">sy</TD><TD>描画元の矩形の左上のY座標を指定します。</TD></TR>
+<TR><TD valign="top">width</TD><TD>描画元の矩形の幅を指定します。</TD></TR>
+<TR><TD valign="top">height</TD><TD>描画元の矩形の高さを指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+_Canvas3D クラスの lock3D メソッドから unlock3D メソッドの間で有効です。<BR>
+lockTexture: メソッドから unlockTexture メソッドの間では、tex_index パラメータは無視されます。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>drawScaledTexture:::::::::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>drawScaledTexture:</B>(int)tex_index <B>:</B>(int)dx <B>:</B>(int)dy <B>:</B>(int)width <B>:</B>(int)height <B>:</B>(int)sx <B>:</B>(int)sy <B>:</B>(int)swidth <B>:</B>(int)sheight</P>
+<P>テクスチャを拡大・縮小して描画します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">tex_index</TD><TD>描画するテクスチャ・リソースのインデックスを指定します。負の値を指定すると、描画色が使用されます。</TD></TR>
+<TR><TD valign="top">dx</TD><TD>描画先の矩形の左上のX座標を指定します。</TD></TR>
+<TR><TD valign="top">dy</TD><TD>描画先の矩形の左上のY座標を指定します。</TD></TR>
+<TR><TD valign="top">width</TD><TD>描画先の矩形の幅を指定します。</TD></TR>
+<TR><TD valign="top">height</TD><TD>描画先の矩形の高さを指定します。</TD></TR>
+<TR><TD valign="top">sx</TD><TD>描画元の矩形の左上のX座標を指定します。</TD></TR>
+<TR><TD valign="top">sy</TD><TD>描画元の矩形の左上のY座標を指定します。</TD></TR>
+<TR><TD valign="top">swidth</TD><TD>描画元の矩形の幅を指定します。</TD></TR>
+<TR><TD valign="top">sheight</TD><TD>描画元の矩形の高さを指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+_Canvas3D クラスの lock3D メソッドから unlock3D メソッドの間で有効です。<BR>
+lockTexture: メソッドから unlockTexture メソッドの間では、tex_index パラメータは無視されます。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>drawTransTexture::::::::::::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>drawTransTexture:</B>(int)tex_index <B>:</B>(float)dx <B>:</B>(float)dy <B>:</B>(int)sx <B>:</B>(int)sy <B>:</B>(int)width <B>:</B>(int)height <B>:</B>(float)cx <B>:</B>(float)cy <B>:</B>(float)r360 <B>:</B>(float)z128x <B>:</B>(float)z128y</P>
+<P>テクスチャを回転・拡大・縮小して描画します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">tex_index</TD><TD>描画するテクスチャ・リソースのインデックスを指定します。負の値を指定すると、描画色が使用されます。</TD></TR>
+<TR><TD valign="top">dx</TD><TD>描画先のアンカーX座標を指定します。アンカー座標とは、回転・拡大・縮小の基準となる座標です。</TD></TR>
+<TR><TD valign="top">dy</TD><TD>描画先のアンカーY座標を指定します。アンカー座標とは、回転・拡大・縮小の基準となる座標です。</TD></TR>
+<TR><TD valign="top">sx</TD><TD>描画元の矩形の左上のX座標を指定します。</TD></TR>
+<TR><TD valign="top">sy</TD><TD>描画元の矩形の左上のY座標を指定します。</TD></TR>
+<TR><TD valign="top">width</TD><TD>描画元の矩形の幅を指定します。</TD></TR>
+<TR><TD valign="top">height</TD><TD>描画元の矩形の高さを指定します。</TD></TR>
+<TR><TD valign="top">cx</TD><TD>描画元の矩形の左からの相対X座標を指定します。この座標点とアンカー座標が一致するように描画されます。</TD></TR>
+<TR><TD valign="top">cy</TD><TD>描画元の矩形の上からの相対Y座標を指定します。この座標点とアンカー座標が一致するように描画されます。</TD></TR>
+<TR><TD valign="top">r360</TD><TD>回転角度を指定します。時計回りで、単位は「度」です。</TD></TR>
+<TR><TD valign="top">z128x</TD><TD>X方向の拡大率を指定します。128.0f で拡大率100%（等倍）です。</TD></TR>
+<TR><TD valign="top">z128y</TD><TD>Y方向の拡大率を指定します。128.0f で拡大率100%（等倍）です。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+_Canvas3D クラスの lock3D メソッドから unlock3D メソッドの間で有効です。<BR>
+lockTexture: メソッドから unlockTexture メソッドの間では、tex_index パラメータは無視されます。</P>
+
+<!--
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B></B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P><B></B></P>
+<P></P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+</BODY>
+</HTML>

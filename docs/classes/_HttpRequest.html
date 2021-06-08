@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>D2iPドキュメント</TITLE>
+</HEAD>
+<BODY>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR height="100">
+<TD bgcolor="#cccccc">
+<P><FONT size="+2"><B>クラス _HttpRequest</B></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>サーバーと通信する機能を提供するクラスです。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR bgcolor="#cccccc">
+<TD><FONT size="+2"><B>インスタンスメソッド</B></FONT></TD>
+</TR>
+</TABLE>
+</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>initWithMain:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (id)<B>initWithMain:</B>(_Main*)m</P>
+<P>_HttpRequest オブジェクトを生成します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">m</TD><TD>_Main クラスを継承したクラスオブジェクトを指定します。</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+_HttpRequest オブジェクト</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>useCache:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>useCache:</B>(BOOL)flag</P>
+<P>キャッシュを使用するかどうかを指定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">flag</TD><TD>キャッシュを使用する場合 YES、使用しない場合 NO</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setTimeout:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setTimeout:</B>(float)min</P>
+<P>タイムアウト時間を設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">min</TD><TD>タイムアウト時間を指定します。単位は「分」です。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>get:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (BOOL)<B>get:</B>(NSString*)url</P>
+<P>GETリクエストを送信します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">url</TD><TD>通信先URLを指定します。</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+正常に通信開始した場合 YES、通信開始しなかった場合 NO を返します。</P>
+<P><B>補足説明：</B><BR>
+本メソッドの戻り値が YES の場合、以下のメソッドが呼び出されます。<BR>
+・_Main クラスを継承したクラスの _onHttpResponse: メソッドまたは _onHttpError: メソッド<BR>
+・_Canvas／_Canvas3D クラスを継承したクラスの _onHttpResponse: メソッドまたは _onHttpError: メソッド</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>post:::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (BOOL)<B>post:</B>(NSString*)url <B>:</B>(NSData*)data <B>:</B>(NSString*)content_type</P>
+<P>POSTリクエストを送信します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">url</TD><TD>通信先URLを指定します。</TD></TR>
+<TR><TD valign="top">data</TD><TD>送信するデータを指定します。</TD></TR>
+<TR><TD valign="top">content_type</TD><TD>Content-Type を指定します。nil を指定すると、HTTPヘッダに Content-Type フィールドを含めません。</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+正常に通信開始した場合 YES、通信開始しなかった場合 NO を返します。</P>
+<P><B>補足説明：</B><BR>
+本メソッドの戻り値が YES の場合、以下のメソッドが呼び出されます。<BR>
+・_Main クラスを継承したクラスの _onHttpResponse: メソッドまたは _onHttpError: メソッド<BR>
+・_Canvas／_Canvas3D クラスを継承したクラスの _onHttpResponse: メソッドまたは _onHttpError: メソッド</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>busy</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (BOOL)<B>busy</B></P>
+<P>サーバーと通信中かどうかを示す値を取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+サーバーと通信していてビジーな場合は YES、それ以外の場合は NO を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<!--
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B></B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P><B></B></P>
+<P></P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+</BODY>
+</HTML>

@@ -1,0 +1,270 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>D2iPドキュメント</TITLE>
+</HEAD>
+<BODY>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR height="100">
+<TD bgcolor="#cccccc">
+<P><FONT size="+2"><B>クラス _GameCenter</B></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>Game Center と通信する機能を提供するクラスです。</P>
+
+<P>下記のフレームワークを追加する必要があります。</P>
+
+<P>・GameKit.framework</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR bgcolor="#cccccc">
+<TD><FONT size="+2"><B>インスタンスメソッド</B></FONT></TD>
+</TR>
+</TABLE>
+</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>initWithMain:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (id)<B>initWithMain:</B>(_Main*)m</P>
+<P>_GameCenter オブジェクトを生成します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">m</TD><TD>_Main クラスを継承したクラスオブジェクトを指定します。</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+_GameCenter オブジェクト</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>isAvailable</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (BOOL)<B>isAvailable</B></P>
+<P>Game Center が利用可能かどうかチェックします。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+Game Center が利用できる場合 YES、利用できない場合 NO</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>auth</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>auth</B></P>
+<P>Game Center の認証を行います。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+以下のメソッドが呼び出されます。<BR>
+・_Main クラスを継承したクラスの _gameCenterAuthOK／_gameCenterAuthNG メソッド<BR>
+・_Canvas／_Canvas3D クラスを継承したクラスの _gameCenterAuthOK／_gameCenterAuthNG メソッド</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>disable</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>disable</B></P>
+<P></P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>reportAchievement::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>reportAchievement:</B>(NSString*)identifier <B>:</B>(float)percent</P>
+<P>アチーブメントの達成状況を報告します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">identifier</TD><TD>アチーブメント識別子を指定します。</TD></TR>
+<TR><TD valign="top">percent</TD><TD>達成状況を 0.0 から 100.0 までの値で指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+以下のメソッドが呼び出されます。<BR>
+・_Main クラスを継承したクラスの _gameCenterReportAchievementOK::／_gameCenterReportAchievementNG:: メソッド<BR>
+・_Canvas／_Canvas3D クラスを継承したクラスの _gameCenterReportAchievementOK::／_gameCenterReportAchievementNG:: メソッド</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>resetAchievements</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>resetAchievements</B></P>
+<P>アチーブメントの達成状況をリセットします。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>showAchievementView</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>showAchievementView</B></P>
+<P>標準アチーブメントビューを表示します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+標準アチーブメントビューが閉じられると、以下のメソッドが呼び出されます。<BR>
+・_Main クラスを継承したクラスの _gameCenterCloseAchievementView メソッド<BR>
+・_Canvas／_Canvas3D クラスを継承したクラスの _gameCenterCloseAchievementView メソッド</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>reportScore::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>reportScore:</B>(NSString*)category <B>:</B>(int64_t)score</P>
+<P>スコアを報告します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">category</TD><TD>Leaderboard 識別子を指定します。</TD></TR>
+<TR><TD valign="top">score</TD><TD>スコアを指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+以下のメソッドが呼び出されます。<BR>
+・_Main クラスを継承したクラスの _gameCenterReportScoreOK::／_gameCenterReportScoreNG:: メソッド<BR>
+・_Canvas／_Canvas3D クラスを継承したクラスの _gameCenterReportScoreOK::／_gameCenterReportScoreNG:: メソッド</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>showLeaderboardView:<BR>
+showLeaderboardView</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>showLeaderboardView:</B>(NSString*)category<BR>
+- (void)<B>showLeaderboardView</B></P>
+<P>標準 Leaderboard ビューを表示します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">category</TD><TD>Leaderboard 識別子を指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+標準 Leaderboard ビューが閉じられると、以下のメソッドが呼び出されます。<BR>
+・_Main クラスを継承したクラスの _gameCenterCloseLeaderboardView メソッド<BR>
+・_Canvas／_Canvas3D クラスを継承したクラスの _gameCenterCloseLeaderboardView メソッド</P>
+
+<!--
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B></B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P><B></B></P>
+<P></P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+</BODY>
+</HTML>

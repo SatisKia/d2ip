@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>D2iPドキュメント</TITLE>
+</HEAD>
+<BODY>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR height="100">
+<TD bgcolor="#cccccc">
+<P><FONT size="+2"><B>クラス _Layout</B></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>レイアウト情報を保持するクラスです。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR bgcolor="#cccccc">
+<TD><FONT size="+2"><B>インスタンスメソッド</B></FONT></TD>
+</TR>
+</TABLE>
+</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setWindow:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setWindow:</B>(BOOL)window</P>
+<P>_Canvas／_Canvas3D クラスの setWindow::::::／setWindow:: メソッドで設定されたウィンドウ領域に対する座標かどうかを指定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">window</TD><TD>_Canvas／_Canvas3D クラスの setWindow::::::／setWindow:: メソッドで設定されたウィンドウ領域に対する座標の場合 YES、スクリーンに対する座標の場合 NO</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>clear</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>clear</B></P>
+<P>すべてのレイアウト情報を削除します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>add:::::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>add:</B>(int)left <B>:</B>(int)top <B>:</B>(int)width <B>:</B>(int)height <B>:</B>(int)id</P>
+<P>レイアウト情報を追加します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">left</TD><TD>矩形の左上のX座標を指定します。</TD></TR>
+<TR><TD valign="top">top</TD><TD>矩形の左上のY座標を指定します。</TD></TR>
+<TR><TD valign="top">width</TD><TD>矩形の幅を指定します。</TD></TR>
+<TR><TD valign="top">height</TD><TD>矩形の高さを指定します。</TD></TR>
+<TR><TD valign="top">id</TD><TD>割り当てるレイアウトIDを指定します。_Canvas／_Canvas3D クラスの getLayoutState メソッドでタッチ状態を取得するには、0～31 の値を指定する必要があります。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getLeft:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getLeft:</B>(int)id</P>
+<P>レイアウトの左上X座標を取得します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">id</TD><TD>レイアウトID</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+レイアウトの左上X座標を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getTop:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getTop:</B>(int)id</P>
+<P>レイアウトの左上Y座標を取得します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">id</TD><TD>レイアウトID</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+レイアウトの左上Y座標を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getRight:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getRight:</B>(int)id</P>
+<P>レイアウトの右下X座標を取得します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">id</TD><TD>レイアウトID</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+レイアウトの右下X座標を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getBottom:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getBottom:</B>(int)id</P>
+<P>レイアウトの右下Y座標を取得します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">id</TD><TD>レイアウトID</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+レイアウトの右下Y座標を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getWidth:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getWidth:</B>(int)id</P>
+<P>レイアウトの幅を取得します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">id</TD><TD>レイアウトID</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+レイアウトの幅を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getHeight:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getHeight:</B>(int)id</P>
+<P>レイアウトの高さを取得します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">id</TD><TD>レイアウトID</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+レイアウトの高さを返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<!--
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B></B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P><B></B></P>
+<P></P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+</BODY>
+</HTML>

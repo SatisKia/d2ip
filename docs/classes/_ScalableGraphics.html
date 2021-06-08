@@ -1,0 +1,870 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>D2iPドキュメント</TITLE>
+</HEAD>
+<BODY>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR height="100">
+<TD bgcolor="#cccccc">
+<P><FONT size="+2"><B>クラス _ScalableGraphics</B></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>イメージ、シェイプ、文字列の描画をスケーラブルに行う機能を提供するクラスです。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR bgcolor="#cccccc">
+<TD><FONT size="+2"><B>クラスメソッド</B></FONT></TD>
+</TR>
+</TABLE>
+</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getColorOfRGB:::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>+ (int)<B>getColorOfRGB:</B>(int)r <B>:</B>(int)g <B>:</B>(int)b</P>
+<P>RGB値を指定して、対応するカラーを表す整数値を取得します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">r</TD><TD>赤要素の輝度を指定します（0～255）。</TD></TR>
+<TR><TD valign="top">g</TD><TD>緑要素の輝度を指定します（0～255）。</TD></TR>
+<TR><TD valign="top">b</TD><TD>青要素の輝度を指定します（0～255）。</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+カラーを表す値を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR bgcolor="#cccccc">
+<TD><FONT size="+2"><B>インスタンスメソッド</B></FONT></TD>
+</TR>
+</TABLE>
+</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setScale:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setScale:</B>(float)scale</P>
+<P>拡大率を設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">scale</TD><TD>拡大率を指定します。1.0f で等倍になります。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>scale</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (float)<B>scale</B></P>
+<P>拡大率を取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+拡大率を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>scaledValue:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>scaledValue:</B>(int)val</P>
+<P>指定した値の、拡大後の値を取得します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">val</TD><TD>拡大前の値</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+拡大後の値を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setGraphics:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setGraphics:</B>(_Graphics*)g</P>
+<P>ベースとなる _Graphics オブジェクトを設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">g</TD><TD>ベースとなる _Graphics オブジェクト</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getWidth</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getWidth</B></P>
+<P>描画領域の幅を取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+描画領域の幅を返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>getHeight</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>getHeight</B></P>
+<P>描画領域の高さを取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+描画領域の高さを返します。</P>
+<!--
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setStrokeWidth:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setStrokeWidth:</B>(float)width</P>
+<P>線幅を設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">width</TD><TD>線幅を指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setColor:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setColor:</B>(int)color</P>
+<P>描画に使用する色を設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">color</TD><TD>描画に使用する色を指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setAlpha:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setAlpha:</B>(int)a</P>
+<P>描画で参照されるα値を設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">a</TD><TD>α値を指定します（0～255）。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+α値とは、255 で不透明、0 で完全な透明になる値です。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setROP:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setROP:</B>(int)mode</P>
+<P>ラスタオペレーションを設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">mode</TD><TD>ラスタオペレーションを指定します。次のいずれかを指定します。<BR>
+<BR>
+<TABLE border="0" cellpadding="0" cellspacing="0">
+<TR><TD>ROP_COPY</TD><TD>　通常合成。</TD></TR>
+<TR><TD>ROP_ADD</TD><TD>　加算合成。</TD></TR>
+</TABLE>
+</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setFlipMode:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setFlipMode:</B>(int)flipmode</P>
+<P>イメージの描画時に反転または回転して描画を行うかどうかを設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">flipmode</TD><TD>イメージの描画時の反転または回転方法を指定します。次のいずれかを指定します。<BR>
+<BR>
+<TABLE border="0" cellpadding="0" cellspacing="0">
+<TR><TD>FLIP_NONE</TD><TD>　反転しないことを表します。</TD></TR>
+<TR><TD>FLIP_HORIZONTAL</TD><TD>　横方向に鏡像反転することを表します。</TD></TR>
+<TR><TD>FLIP_VERTICAL</TD><TD>　縦方向に鏡像反転することを表します。</TD></TR>
+<TR><TD>FLIP_ROTATE</TD><TD>　縦横方向に鏡像反転（180度回転）することを表します。</TD></TR>
+</TABLE>
+</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setOrigin::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setOrigin:</B>(int)x <B>:</B>(int)y</P>
+<P>描画の際の座標原点を設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">x</TD><TD>X方向のオフセット値を指定します。</TD></TR>
+<TR><TD valign="top">y</TD><TD>Y方向のオフセット値を指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setFont::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setFont:</B>(NSString*)name <B>:</B>(int)size</P>
+<P>フォントを設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">name</TD><TD>フォント名を指定します。</TD></TR>
+<TR><TD valign="top">size</TD><TD>フォントサイズを指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setFontName:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setFontName:</B>(NSString*)name</P>
+<P>フォント名を設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">name</TD><TD>フォント名を指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>setFontSize:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>setFontSize:</B>(int)size</P>
+<P>フォントサイズを設定します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">size</TD><TD>フォントサイズを指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>stringWidth:</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>stringWidth:</B>(NSString*)str</P>
+<P>指定した文字列の幅を取得します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">str</TD><TD>文字列を指定します。</TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+文字列を表示するのに必要な幅を返します。</P>
+<P><B>補足説明：</B><BR>
+DoJaでの Font クラスの stringWidth() メソッドに相当する機能です。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>fontHeight</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (int)<B>fontHeight</B></P>
+<P>フォントの高さを取得します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+-->
+<P><B>戻り値：</B><BR>
+フォントの高さを返します。</P>
+<P><B>補足説明：</B><BR>
+DoJaでの Font クラスの getHeight() メソッドに相当する機能です。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>lock</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>lock</B></P>
+<P>描画の開始を宣言します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+_Image オブジェクトの getGraphics メソッドで取得した _Graphics オブジェクトについては、本メソッドの実行は不要です。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>unlock</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>unlock</B></P>
+<P>描画の終了を宣言します。</P>
+<!--
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+_Image オブジェクトの getGraphics メソッドで取得した _Graphics オブジェクトについては、本メソッドの実行は不要です。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>drawLine::::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>drawLine:</B>(int)x1 <B>:</B>(int)y1 <B>:</B>(int)x2 <B>:</B>(int)y2</P>
+<P>直線を描画します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">x1</TD><TD>直線の描画開始点のX座標を指定します。</TD></TR>
+<TR><TD valign="top">y1</TD><TD>直線の描画開始点のY座標を指定します。</TD></TR>
+<TR><TD valign="top">x2</TD><TD>直線の描画終了点のX座標を指定します。</TD></TR>
+<TR><TD valign="top">y2</TD><TD>直線の描画終了点のY座標を指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>drawRect::::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>drawRect:</B>(int)x <B>:</B>(int)y <B>:</B>(int)width <B>:</B>(int)height</P>
+<P>矩形を描画します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">x</TD><TD>矩形の左上のX座標を指定します。</TD></TR>
+<TR><TD valign="top">y</TD><TD>矩形の左上のY座標を指定します。</TD></TR>
+<TR><TD valign="top">width</TD><TD>矩形の幅を指定します。</TD></TR>
+<TR><TD valign="top">height</TD><TD>矩形の高さを指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+横方向には x 番目から x + w 番目のピクセル（w + 1 個）が描画され、縦方向には y 番目から y + h 番目のピクセル（h + 1 個）が描画されます。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>fillRect::::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>fillRect:</B>(int)x <B>:</B>(int)y <B>:</B>(int)width <B>:</B>(int)height</P>
+<P>矩形領域を塗りつぶします。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">x</TD><TD>矩形の左上のX座標を指定します。</TD></TR>
+<TR><TD valign="top">y</TD><TD>矩形の左上のY座標を指定します。</TD></TR>
+<TR><TD valign="top">width</TD><TD>矩形の幅を指定します。</TD></TR>
+<TR><TD valign="top">height</TD><TD>矩形の高さを指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+横方向には x 番目から x + w - 1 番目のピクセル（w 個）が塗りつぶされ、縦方向には y 番目から y + h - 1 番目のピクセル（h 個）が塗りつぶされます。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>drawRoundRect:::::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>drawRoundRect:</B>(int)x <B>:</B>(int)y <B>:</B>(int)width <B>:</B>(int)height <B>:</B>(int)r</P>
+<P>矩形の角を丸めて描画します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">x</TD><TD>矩形の左上のX座標を指定します。</TD></TR>
+<TR><TD valign="top">y</TD><TD>矩形の左上のY座標を指定します。</TD></TR>
+<TR><TD valign="top">width</TD><TD>矩形の幅を指定します。</TD></TR>
+<TR><TD valign="top">height</TD><TD>矩形の高さを指定します。</TD></TR>
+<TR><TD valign="top">r</TD><TD>丸みの幅を指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+横方向には x 番目から x + w 番目のピクセル（w + 1 個）が描画され、縦方向には y 番目から y + h 番目のピクセル（h + 1 個）が描画されます。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>fillRoundRect:::::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>fillRoundRect:</B>(int)x <B>:</B>(int)y <B>:</B>(int)width <B>:</B>(int)height <B>:</B>(int)r</P>
+<P>矩形の角を丸めた領域を塗りつぶします。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">x</TD><TD>矩形の左上のX座標を指定します。</TD></TR>
+<TR><TD valign="top">y</TD><TD>矩形の左上のY座標を指定します。</TD></TR>
+<TR><TD valign="top">width</TD><TD>矩形の幅を指定します。</TD></TR>
+<TR><TD valign="top">height</TD><TD>矩形の高さを指定します。</TD></TR>
+<TR><TD valign="top">r</TD><TD>丸みの幅を指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+-->
+<P><B>補足説明：</B><BR>
+横方向には x 番目から x + w - 1 番目のピクセル（w 個）が塗りつぶされ、縦方向には y 番目から y + h - 1 番目のピクセル（h 個）が塗りつぶされます。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>drawOval::::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>drawOval:</B>(int)x <B>:</B>(int)y <B>:</B>(int)width <B>:</B>(int)height</P>
+<P>矩形領域に収まる楕円を描画します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">x</TD><TD>矩形領域の左上のX座標を指定します。</TD></TR>
+<TR><TD valign="top">y</TD><TD>矩形領域の左上のY座標を指定します。</TD></TR>
+<TR><TD valign="top">width</TD><TD>矩形領域の幅を指定します。</TD></TR>
+<TR><TD valign="top">height</TD><TD>矩形領域の高さを指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>fillOval::::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>fillOval:</B>(int)x <B>:</B>(int)y <B>:</B>(int)width <B>:</B>(int)height</P>
+<P>矩形領域に収まる楕円の領域を塗りつぶします。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">x</TD><TD>矩形領域の左上のX座標を指定します。</TD></TR>
+<TR><TD valign="top">y</TD><TD>矩形領域の左上のY座標を指定します。</TD></TR>
+<TR><TD valign="top">width</TD><TD>矩形領域の幅を指定します。</TD></TR>
+<TR><TD valign="top">height</TD><TD>矩形領域の高さを指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>drawCircle:::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>drawCircle:</B>(int)x <B>:</B>(int)y <B>:</B>(int)r</P>
+<P>円を描画します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">x</TD><TD>円の中心のX座標を指定します。</TD></TR>
+<TR><TD valign="top">y</TD><TD>円の中心のY座標を指定します。</TD></TR>
+<TR><TD valign="top">r</TD><TD>円の半径を指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>fillCircle:::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>fillCircle:</B>(int)x <B>:</B>(int)y <B>:</B>(int)r</P>
+<P>円の領域を塗りつぶします。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">x</TD><TD>円の中心のX座標を指定します。</TD></TR>
+<TR><TD valign="top">y</TD><TD>円の中心のY座標を指定します。</TD></TR>
+<TR><TD valign="top">r</TD><TD>円の半径を指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>drawString:::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>drawString:</B>(NSString*)str <B>:</B>(int)x <B>:</B>(int)y</P>
+<P>文字列を描画します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">str</TD><TD>描画する文字列を指定します。</TD></TR>
+<TR><TD valign="top">x</TD><TD>X座標を指定します。</TD></TR>
+<TR><TD valign="top">y</TD><TD>Y座標を指定します。ベースラインの座標を指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>drawImage:::<BR>
+drawImage:::::::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>drawImage:</B>(_Image*)image <B>:</B>(int)x <B>:</B>(int)y<BR>
+- (void)<B>drawImage:</B>(_Image*)image <B>:</B>(int)dx <B>:</B>(int)dy <B>:</B>(int)sx <B>:</B>(int)sy <B>:</B>(int)width <B>:</B>(int)height</P>
+<P>イメージを描画します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">image</TD><TD>描画する _Image オブジェクトを指定します。</TD></TR>
+<TR><TD valign="top">x</TD><TD>X座標を指定します。</TD></TR>
+<TR><TD valign="top">y</TD><TD>Y座標を指定します。</TD></TR>
+<TR><TD valign="top">dx</TD><TD>描画先のX座標を指定します。</TD></TR>
+<TR><TD valign="top">dy</TD><TD>描画先のY座標を指定します。</TD></TR>
+<TR><TD valign="top">sx</TD><TD>描画元の矩形の左上のX座標を指定します。</TD></TR>
+<TR><TD valign="top">sy</TD><TD>描画元の矩形の左上のY座標を指定します。</TD></TR>
+<TR><TD valign="top">width</TD><TD>描画元の矩形の幅を指定します。</TD></TR>
+<TR><TD valign="top">height</TD><TD>描画元の矩形の高さを指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>drawScaledImage:::::::::<BR>
+drawScaledImage:::::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>drawScaledImage:</B>(_Image*)image <B>:</B>(int)dx <B>:</B>(int)dy <B>:</B>(int)width <B>:</B>(int)height <B>:</B>(int)sx <B>:</B>(int)sy <B>:</B>(int)swidth <B>:</B>(int)sheight<BR>
+- (void)<B>drawScaledImage:</B>(_Image*)image <B>:</B>(int)dx <B>:</B>(int)dy <B>:</B>(int)width <B>:</B>(int)height</P>
+<P>イメージを拡大・縮小して描画します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">image</TD><TD>描画する _Image オブジェクトを指定します。</TD></TR>
+<TR><TD valign="top">dx</TD><TD>描画先の矩形の左上のX座標を指定します。</TD></TR>
+<TR><TD valign="top">dy</TD><TD>描画先の矩形の左上のY座標を指定します。</TD></TR>
+<TR><TD valign="top">width</TD><TD>描画先の矩形の幅を指定します。</TD></TR>
+<TR><TD valign="top">height</TD><TD>描画先の矩形の高さを指定します。</TD></TR>
+<TR><TD valign="top">sx</TD><TD>描画元の矩形の左上のX座標を指定します。</TD></TR>
+<TR><TD valign="top">sy</TD><TD>描画元の矩形の左上のY座標を指定します。</TD></TR>
+<TR><TD valign="top">swidth</TD><TD>描画元の矩形の幅を指定します。</TD></TR>
+<TR><TD valign="top">sheight</TD><TD>描画元の矩形の高さを指定します。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B>drawTransImage::::::::::::<BR>
+drawTransImage::::::::</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P>- (void)<B>drawTransImage:</B>(_Image*)image <B>:</B>(float)dx <B>:</B>(float)dy <B>:</B>(int)sx <B>:</B>(int)sy <B>:</B>(int)width <B>:</B>(int)height <B>:</B>(float)cx <B>:</B>(float)cy <B>:</B>(float)r360 <B>:</B>(float)z128x <B>:</B>(float)z128y<BR>
+- (void)<B>drawTransImage:</B>(_Image*)image <B>:</B>(float)dx <B>:</B>(float)dy <B>:</B>(float)cx <B>:</B>(float)cy <B>:</B>(float)r360 <B>:</B>(float)z128x <B>:</B>(float)z128y</P>
+<P>イメージを回転・拡大・縮小して描画します。</P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top">image</TD><TD>描画する _Image オブジェクトを指定します。</TD></TR>
+<TR><TD valign="top">dx</TD><TD>描画先のアンカーX座標を指定します。アンカー座標とは、回転・拡大・縮小の基準となる座標です。</TD></TR>
+<TR><TD valign="top">dy</TD><TD>描画先のアンカーY座標を指定します。アンカー座標とは、回転・拡大・縮小の基準となる座標です。</TD></TR>
+<TR><TD valign="top">sx</TD><TD>描画元の矩形の左上のX座標を指定します。</TD></TR>
+<TR><TD valign="top">sy</TD><TD>描画元の矩形の左上のY座標を指定します。</TD></TR>
+<TR><TD valign="top">width</TD><TD>描画元の矩形の幅を指定します。</TD></TR>
+<TR><TD valign="top">height</TD><TD>描画元の矩形の高さを指定します。</TD></TR>
+<TR><TD valign="top">cx</TD><TD>描画元の矩形の左からの相対X座標を指定します。この座標点とアンカー座標が一致するように描画されます。</TD></TR>
+<TR><TD valign="top">cy</TD><TD>描画元の矩形の上からの相対Y座標を指定します。この座標点とアンカー座標が一致するように描画されます。</TD></TR>
+<TR><TD valign="top">r360</TD><TD>回転角度を指定します。時計回りで、単位は「度」です。</TD></TR>
+<TR><TD valign="top">z128x</TD><TD>X方向の拡大率を指定します。128.0f で拡大率100%（等倍）です。</TD></TR>
+<TR><TD valign="top">z128y</TD><TD>Y方向の拡大率を指定します。128.0f で拡大率100%（等倍）です。</TD></TR>
+</TABLE>
+</P>
+<!--
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+<!--
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="4" height="4"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+1">
+<B></B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+<P><B></B></P>
+<P></P>
+<P><B>パラメータ：</B><BR>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR><TD valign="top"></TD><TD></TD></TR>
+</TABLE>
+</P>
+<P><B>戻り値：</B><BR>
+</P>
+<P><B>補足説明：</B><BR>
+</P>
+-->
+
+</BODY>
+</HTML>

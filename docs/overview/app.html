@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>D2iPドキュメント</TITLE>
+</HEAD>
+<BODY>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR height="100">
+<TD bgcolor="#cccccc">
+<P><FONT size="+2"><B>アプリの流れ</B></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>D2iPを使ったiPhoneアプリでの、プログラムの流れを説明していきます。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="6" height="6"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+2">
+<B>アプリの起動</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+
+<P>アプリが起動したら、まず _Main クラスを継承したクラスの <B>_start</B> メソッドが呼び出されます。</P>
+
+<P>ここで、アプリで使用するデータを構築したり、各種初期化を行ってください。</P>
+
+<P>また、_Canvas／_Canvas3D クラスを継承したオブジェクトを構築して、_Main クラスの setCurrent:／addCanvas: メソッドで設定・追加してください。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="6" height="6"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+2">
+<B>キャンバスの初期化</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+
+<P>_Main クラスの setCurrent:／addCanvas: メソッドで _Canvas／_Canvas3D クラスを継承したオブジェクトが設定・追加されると、_Canvas クラスを継承したクラスの <B>_init</B> メソッドまたは _Canvas3D クラスを継承したクラスの <B>_init3D</B> メソッドが呼び出されます。</P>
+
+<P>ここで、アプリでのキャンバス関連の初期化を行ってください。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="6" height="6"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+2">
+<B>フレーム毎の描画</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+
+<P>フレーム毎に、_Canvas クラスを継承したクラスの <B>_paint:</B> メソッドまたは _Canvas3D クラスを継承したクラスの <B>_paint3D:</B> メソッドが呼び出されます。</P>
+
+<P>ここで、フレーム毎のアプリ更新処理と描画処理を全て記述してください。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="6" height="6"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+2">
+<B>イベント検知</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+
+<P>各種イベントが発生すると、_Canvas／_Canvas3D クラスを継承したクラスの <B>_processEvent::</B> メソッドが呼び出されます。</P>
+
+<P>ここで、タッチイベントが検知できます。詳細は『<A href="touch.html">タッチイベントの処理</A>』の項を参照ください。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="6" height="6"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+2">
+<B>サスペンド</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+
+<P>アプリケーションがサスペンド状態になった直後に、_Main クラスを継承したクラスの <B>_suspend</B> メソッドが呼び出されます。また、_Canvas／_Canvas3D クラスを継承したクラスの <B>_suspend</B> メソッドも呼び出されます。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="6" height="6"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+2">
+<B>レジューム</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+
+<P>アプリケーションがサスペンド状態から戻った直後に、_Main クラスを継承したクラスの <B>_resume</B> メソッドが呼び出されます。また、_Canvas／_Canvas3D クラスを継承したクラスの <B>_resume</B> メソッドも呼び出されます。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="6" height="6"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+2">
+<B>キャンバスの終了</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+
+<P>キャンバスが終了する時、_Canvas クラスを継承したクラスの <B>_end</B> メソッドまたは _Canvas3D クラスを継承したクラスの <B>_end3D</B> メソッドが呼び出されます。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="6" height="6"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+2">
+<B>アプリの終了</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+
+<P>アプリ終了時に _Main クラスを継承したクラスの <B>_destroy</B> メソッドが呼び出されます。</P>
+
+<P>ここで、アプリで使用したデータを解放したり、各種終了処理を行ってください。</P>
+
+</BODY>
+</HTML>

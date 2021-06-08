@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<TITLE>D2iPドキュメント</TITLE>
+</HEAD>
+<BODY>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="3" cellspacing="0">
+<TR height="100">
+<TD bgcolor="#cccccc">
+<P><FONT size="+2"><B>タッチイベントの処理</B></FONT></P>
+</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>タッチイベントが発生すると、_Canvas／_Canvas3D クラスを継承したクラスの <B>_processEvent::</B> メソッドが呼び出されます。このメソッドの中で、イベントのタイプとパラメータを識別してください。_processEvent:: メソッドの記述例は次のようになります。</P>
+
+<P>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR>
+<TD>- (void)_processEvent:(int)type :(int)param<BR>
+{<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;switch( type )<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;{<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;case TOUCH_DOWN_EVENT:<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// タッチされた<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;case TOUCH_MOVE_EVENT:<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// ムーブした<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;case TOUCH_UP_EVENT:<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// タッチが離された<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;}<BR>
+}</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>イベントのタイプは、<B>TOUCH_DOWN_EVENT</B>／<B>TOUCH_MOVE_EVENT</B>／<B>TOUCH_UP_EVENT</B> の3種類で、パラメータは、タッチIDです。</P>
+
+<P>タッチイベントXY値は、_Canvas／_Canvas3D クラスの <B>getTouchX:</B>／<B>getTouchY:</B> メソッドで取得できます。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="6" height="6"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+2">
+<B>レイアウトタッチイベントの処理</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+
+<P>setLayout: メソッドでレイアウトを適用している場合、レイアウトタッチイベントが発生するようになり、_Canvas／_Canvas3D クラスを継承したクラスの <B>_processEvent::</B> メソッドが呼び出されます。_processEvent:: メソッドの記述例は次のようになります。</P>
+
+<P>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR>
+<TD>- (void)_processEvent:(int)type :(int)param<BR>
+{<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;switch( type )<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;{<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;case LAYOUT_DOWN_EVENT:<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// レイアウトがタッチされた<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;case LAYOUT_UP_EVENT:<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// レイアウトのタッチが離された<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;}<BR>
+}</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>イベントのタイプは、<B>LAYOUT_DOWN_EVENT</B>／<B>LAYOUT_UP_EVENT</B> の2種類で、パラメータは、レイアウトIDです。</P>
+
+<P>
+<TABLE border="0" width="100%" cellpadding="0" cellspacing="0">
+<TR><TD bgcolor="#888888" width="6" height="6"></TD><TD bgcolor="#888888"></TD></TR>
+<TR><TD bgcolor="#888888"></TD><TD width="99%"><FONT size="+2">
+<B>タッチされているレイアウトの判別</B>
+</FONT></TD></TR>
+</TABLE>
+</P>
+
+<P>イベント検知以外に、タッチされているレイアウトを判別する方法があります。_Canvas／_Canvas3D クラスの <B>getLayoutState</B> メソッドを使用する方法です。使用例を示します。</P>
+
+<P>
+<TABLE border="1" cellpadding="3" cellspacing="0">
+<TR>
+<TD>int layout = [self getLayoutState];<BR>
+<BR>
+if( (layout &amp; (1 &lt;&lt; 2)) != 0 )<BR>
+{<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;// レイアウトIDが 2 のレイアウトが押されている<BR>
+}</TD>
+</TR>
+</TABLE>
+</P>
+
+</BODY>
+</HTML>
